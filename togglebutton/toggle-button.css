@@ -1,0 +1,28 @@
+.switch{
+   opacity:0;
+}
+.switch-button{
+    width:200px;
+    height:100px;
+    background:lightgrey;
+    position:relative;
+    border-radius:50px;
+}
+.switch-button::before{
+    content:'';
+    position:absolute;
+    height:90px;
+    width:90px;
+    background:white;
+    left:5px;
+    top:5px;
+    right:2px; 
+    border-radius:45px;
+    transition:all 0.5s ease-in-out;
+}
+input[type="checkbox"]:checked + .switch-button::before{
+    left:105px;
+}
+input[type="checkbox"]:checked+ .switch-button{
+    background:lightgreen;
+}
